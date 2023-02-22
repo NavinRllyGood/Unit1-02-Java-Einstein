@@ -8,9 +8,13 @@ import java.util.Scanner;
 * @since 2023-02-14
 */
 
-public final class Einstein { 
+public final class Einstein {
 
-    static final double light = 299792458; 
+    /**
+    * Constant for the speed of light.
+    */
+    static final double SPEED_OF_LIGHT = 299792458.0;
+
     /**
     * Main lines of code.
     *
@@ -28,7 +32,7 @@ public final class Einstein {
     *
     * @param args placeholder
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         // Using Scanner for Getting Input from User
         System.out.println("Enter the mass of your object : ");
@@ -45,9 +49,9 @@ public final class Einstein {
             // check if negative
             if (mass >= 0) {
                 // math
-                double energy = mass * Math.pow(light,2); 
+                final double energy = mass * Math.pow(SPEED_OF_LIGHT, 2);
 
-                 // Print energy total  
+                // Print energy total
                 System.out.format("The energy of your mass is %.3f ", energy);
                 System.out.println(" J ");
             } else {
